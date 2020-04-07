@@ -1,0 +1,432 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-font:'Source Sans Pro' , sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font:'Cabin', sans-serif;
+    --main-font-color-dark:#252525;
+    --secondary-font-color:#c59d5f;
+    --body-font-color:#515151;
+}
+html {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+section {
+    padding: 1rem 0;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 1.6rem;
+}
+.clear {
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1225px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/*Headers*/
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 1;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.nav {
+    display: flex;
+    height: 7.2rem;
+    align-items: center;
+}
+
+.menu-toggle {
+    color: #fFF;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 5200;
+    transform: translateY(-50%);
+}
+.fa-times {
+    display: none;
+}
+.nav-list {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: linear-gradient(tomato,green);
+    padding: 30px 50px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1250;
+    transform: translateY(-100%);
+    transition: transform .5s;
+    overflow: scroll;
+}
+.nav-link {
+    margin-top: 23px;
+    text-align: center;
+}
+.nav::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+    overflow: hidden;
+}
+
+.open .fa-times {
+    display: block;
+    color: rgb(185, 49, 49);
+}
+.open .fa-bars {
+    display: none;
+}
+.open .nav-list {
+    transform: translateY(0);
+}
+.open .nav::before {
+    opacity: 1;
+    transform: scale(1);
+}
+.nav-item {
+    border-bottom: 2px solid rgba(225, 225, 225, 0.3);
+}
+.nav-link {
+    display: block;
+    font-size:  1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color .5s;
+    padding-bottom: .6rem;
+}
+.nav-link:hover {
+    color: rgb(204, 207, 13);
+    font-weight: 600;
+}
+
+
+
+.hero {
+    width: 100%;
+    height:750px;
+    background: url(../img/hero.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto 0px;
+}
+.sub-headline {
+    font-size: 6.5rem;
+    font-family: var(--secondary-font);
+    color:rgb(231, 228, 9);
+    line-height: 1;
+    margin-left: -3px;
+    margin-top: 250px;
+}
+.first-letter{
+    color: rgb(231, 31, 98);
+    font-size: 8.3rem;
+    font-family: Curlz MT;
+    font-weight: bold;
+}
+.headline {
+    color:#fff;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    text-align: center;
+    }
+
+.separator {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.line {
+    max-width: 8.4rem;
+    height: .25rem;
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+.line-right::before,
+.line-left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+}
+.line-right::before {
+    border-right-color: #fff;
+    right: 0;
+}
+.line-left::before {
+    border-left-color: #fff;
+    left: 0;
+}
+.asterisk {
+    color:var(--secondary-font-color);
+    margin: 0 1.6rem;
+    font-size: 1.2rem;
+}
+.headline-description h5 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: 1.3rem;
+    margin-right: -3px;
+}
+
+.btn {
+    display: inline block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+.cta-btn {
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding:10px 20px 10px 20px;
+    color: var(--secondary-font-color);
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.cta-btn:hover {
+    background-color: var(--secondary-font-color);
+    color: #fff;
+    transition: .5s;
+
+
+}
+.sub-global-headline {
+    font-size: 6.5rem;
+    font-family: var(--secondary-font);
+    color:rgb(231, 228, 9);
+    line-height: 1;
+    margin-left: -3px;
+    text-align: center;
+}
+.main-global-headline {
+    color:rgb(68, 66, 66);
+    font-size: 2.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    text-align: center;
+    margin-right: -.7rem;
+}
+.global-headline {
+    margin-top: 2.9rem;
+}
+.discover-our-story .global-headline {
+    margin-top: 2.9rem;
+}
+.global-headline .asterisk {
+    color: var(--body-font-color);
+    text-align: center;
+    margin: 1.6rem;
+}
+
+.restaurant-info  {
+    text-align: center;
+}
+.restaurant-description  {
+    margin-bottom: 3rem;
+}
+.restaurant-description p {
+    line-height: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+.body-btn {
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    font-weight: bold;
+    position: relative;
+    transition: color .5s;
+}
+.body-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+    height: 3px;
+    bottom: -1px;
+}
+.body-btn:hover,
+.body-btn:focus {
+  color: var(--main-font-color-dark);
+}
+/** Testful recipies  ***/
+.testful-recipes {
+    background: url(../img/tasteful-recipes.jpg) center no-repeat;
+    background-size: cover;
+}
+.between {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+.between .main-global-headline {
+    color: white;
+}
+
+/***Discover Menu **/
+
+.image-group , .delight-image-group  {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .7rem;
+}
+.image-group img:hover {
+	transform: scale(1.05);
+	transition: .5s;
+	border-radius: 5px;
+	box-shadow: 0px 1px 6px 0px red;
+}
+
+.perfect-blend {
+    background: url(../img/perfect-blend.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+
+footer {
+    padding: 6.5rem 0;
+    padding-bottom: 2rem;
+    background-color: #121211;
+    text-align: center;
+    position: relative;
+    margin-top: 3rem;
+}
+.back-to-top {
+   width: 7rem;
+   height: 7rem;
+   background-color: #121212;
+   position: absolute;
+   top: -3rem;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 50%;
+}  
+
+.fa-chevron-up {
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+}
+.footer-content {
+   overflow: hidden;
+}
+.footer-content h4 {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    color: rgb(179, 173, 173);
+    margin-bottom: 3rem;
+}
+.footer-content .asterisk {
+    margin-bottom: 2rem;
+}
+.footer-content p {
+    color: rgb(168, 163, 163);
+    line-height: 2;
+    text-align: center;
+    padding: 0px 2rem;
+}
+.footer-content-about {
+    margin-bottom: 5.3rem;
+}
+.social-icons {
+    list-style: none;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.social-icons i {
+    font-size: 2rem;
+    color: white;
+    padding: .8rem 1.5rem ;
+    opacity: .5;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    color: white;
+    opacity: 1;
+
+}
+
+.newsletter-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.newsletter-input {
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+.newsletter-btn {
+    font-size: 1.6rem;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 19.4rem;
+}
+.copyright {
+    margin-top: 4rem;
+    color: seashell;
+}
+.copyright  a {
+    color: springgreen;
+    text-decoration: underline;
+}

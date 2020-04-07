@@ -1,0 +1,102 @@
+@media screen and (max-width:576px){
+
+    .container {
+        padding: 0 .4rem;
+    }
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        z-index: 1;
+        overflow: hidden;
+        background-image: linear-gradient(to left, rgb(27, 9, 187) ,rgb(228, 36, 148));
+    }
+    .hero {
+        width: 100%;
+        height: 370px;
+        background: url(../img/hero.jpg)center no-repeat ;
+        background-size: cover;
+        display: block;
+    }
+     
+    .sub-headline {
+        font-size: 4.5rem;
+        font-family:Curlz MT;
+        color:rgb(231, 228, 9);
+        line-height: .8;
+        margin-top: 114px;
+        margin-right: -3px;
+
+    }
+    .first-letter{
+        color: rgb(231, 31, 98);
+        font-size: 5.3rem;
+        font-family: Curlz MT;
+        font-weight: bold;
+    }
+    .headline {
+    color:#fff;
+    font-size: 2.5rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    text-align: center;
+    }
+
+    .headline-description {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-bottom: 1.3rem;
+        margin-right: -3px;
+    }
+    .discover-our-menu .container {
+        padding: 0 1.4rem;
+    }
+    .newsletter-input {
+        width: 100%;
+        max-width: 20rem;
+        padding: .8rem 1rem;
+        border-radius: .4rem;
+        font-size: 1.3rem;
+    }
+    .newsletter-btn {
+        font-size: 1.6rem;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 16.4rem;
+    }
+    .between {
+        min-height: 45vh;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    
+    }
+    .social-icons i {
+        font-size: 2rem;
+        color: white;
+        padding: .8rem 1rem ;
+        opacity: .5;
+        cursor: pointer;
+    }
+    
+}
+@media screen and (min-width:900px){
+    section {
+        padding: 7.9rem;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .footer-content-devider {
+        display: flex;
+        justify-content: space-between;
+    }
+}
