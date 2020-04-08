@@ -88,15 +88,64 @@
     }
     
 }
-@media screen and (min-width:900px){
+@media screen and (min-width:768px){
     section {
         padding: 7.9rem;
-    }
-    .menu-toggle {
-        display: none;
     }
     .footer-content-devider {
         display: flex;
         justify-content: space-between;
+    }
+    .social-media {
+        margin-left: 40px;
+    }
+    .newletter-container {
+        margin-right: 6rem;
+    }
+    .newsletter-btn {
+        font-size: 1.6rem;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 17.4rem;
+    }
+    .sub-headline {
+        margin-top: 200px;
+    }
+    /*.restaurant-description {
+        width: 50%;
+        float: left;
+    }
+    .restaurant-info-img {
+        width: 50%;
+        float: right;
+    } */
+  
+}
+@media screen and (min-width:992px) {
+    .social-media {
+        margin-left: 130px;
+    }
+    .newletter-container {
+        margin-right: 14rem;
+    }
+    .newsletter-btn {
+        font-size: 1.6rem;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 17.4rem;
+    }
+    .restaurant-info {
+        display: flex;
+        align-items: center;
+    }
+    .restaurant-info > div {
+        flex: 1;
+    }
+    .padding-right {
+        padding-right: 7rem;
     }
 }
